@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <style>
+        #sabarish{
+            color: orangered;
+        }
+        
+    </style>
+    <select id="branch">
+        <option value="select">select</option>
+    </select>
+
+    <a href="" id="input"><button>Click</button></a>
+
+    <input type="text" placeholder="Enter the value" id="input2">
+    <button onclick="suresh()">click</button>
+
+    <div id="input1"></div>
+
+    <h1 id="input2">Element Object</h1>
+
+<button onclick="sanjeev()">Add</button>
+<p id="opp">Welcome</p>
+
+<!-- <img src="./31-300x207.jpg" alt="" class="responsive" id="image"> -->
+<div class="responsive">
+    <img src="./2-300x207.png" alt="" id="image">
+    <img src="./15-300x207.png" alt="" id="image1">
+    <img src="./16-300x207.jpg" alt="" id="image2">
+    <img src="./18-300x207 (1).jpg" alt="" id="image3">
+    <img src="./18-300x207.jpg" alt="" id="image4">
+    <img src="" alt="" id="image5">
+
+
+
+</div>
+<button onclick="changeImage()">Change Image</button>
+<button onclick="changeImage1()">Video Creators</button>
+
+
+    
+    <script>
+         let cost1=[35,234,12,34,54,123]
+
+let cartTotal=cost1.reduce((total,el)=>total+el,1000)
+
+console.log(cartTotal);
+
+let sabarish=document.getElementById("input")
+sabarish.href="./patreon.html"
+
+function suresh(){
+                                    let output=document.getElementById("input2").value;
+                                    document.getElementById("input2").value="";
+                                    document.getElementById("input1").innerHTML=output;
+                                }
+
+                                function sanjeev(){
+
+document.getElementById("input2").setAttribute("id","sabarish");
+
+
+}
+
+
+
+// let room= prompt("type your name")
+
+  
+// document.getElementById("opp").innerText=room
+
+// alert("says")
+
+function changeImage(){
+    var img=document.getElementById("image");
+    img.src="./14-300x207.png";
+
+    var img1=document.getElementById("image1");
+    img1.src="./20-300x207.jpg";
+
+    var img2=document.getElementById("image2");
+    img2.src="./22-300x208.png";
+
+    
+    var img3=document.getElementById("image3");
+    img3.src="./24-300x207.png";
+
+      
+    var img4=document.getElementById("image4");
+    img4.src="./28-300x207.jpg";
+
+
+
+
+}
+
+function changeImage1(){
+    var image5=document.getElementById("image");
+    image5.src="./30-300x207.jpg";
+    var image6=document.getElementById("image1");
+    image6.src="./31-300x207.jpg";
+    var image7=document.getElementById("image2");
+    image7.src="./32-300x207 (1).jpg";
+    var image8=document.getElementById("image3");
+    image8.src="./32-300x207.jpg";
+    var image9=document.getElementById("image4");
+    image9.src="./34-300x207.jpg";
+}
+
+
+    </script>
+    
+</body>
+</html>

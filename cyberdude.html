@@ -1,0 +1,1109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                                    //   Javascript functions
+        function GreetUser(firstname,lastname){
+            // let name="sabarish";
+            let msg="Hello " + firstname + " " + lastname + " I'm learning javascript! ";
+            console.log(msg);
+
+        }
+        function add(number1,number2){
+            console.log(number1 - number2);
+        }
+        add(2,2)
+        GreetUser("akash","suresh")
+        GreetUser("sasikala","sakthi")
+
+                                    //  Ternary operator
+let age=16;
+
+let type=age>20? "Adult Ticket" : "Child Ticket";
+
+console.log(type);
+           
+                                    // Logical operator
+      
+           let highIncome=true;
+           let CIBILScore=false;
+
+           let eligibleperson=highIncome || CIBILScore
+
+           let applicationStatus=!eligibleperson
+           
+           console.log("Loan Status:"+eligibleperson);
+
+           console.log("application Status:"+applicationStatus);
+
+                                        // Finding current time using if-else condition
+
+                                        let hrs=new Date();
+                                        console.log(hrs);
+           let hours=new Date().getHours();
+
+        
+          if(hours>=0 && hours<=13){
+            console.log("Good Morning");
+          }
+         else if(hours>=13 && hours<=17){
+
+            console.log("Good Afternoon");
+
+         }
+
+         else{
+            console.log("Good Evening");
+         }
+
+                                        // Switch case
+
+              let marks = 98;
+              
+              switch (true) {
+                case marks>90:
+                    console.log("Super Grade");
+                    
+                    break;
+                    case marks>50:
+                        console.log("Pass");
+                        break;
+                        case marks<50:
+                            console.log("Failed");
+                            break;
+              
+                default:
+                    console.log("Unknown Grade");
+                    break;
+              }
+                                         
+                                        // For loop
+
+              for(i=25;i>=10;i--){
+              if(i % 2 !==0){
+                console.log( "Odd number"+ i);
+              }
+            if(i % 2 ==0){
+                console.log("Even number" +i);
+              } 
+
+              }    
+                                   
+                                        //  While loop
+
+                let j=20;
+                
+                while (j>=1){
+                       if(j % 2 !==0){
+                console.log( "Odd number"+ j);
+              }
+              j--;
+                }
+
+                                        //  For in, For of Loops
+
+               let colors=["Red","Green","Blue"];
+               
+               for(let index in colors){
+                console.log(colors[index]);
+               }
+               for(let color of colors){
+                console.log("color:" + color);
+               }
+
+                                        //   Javascript object and oop
+
+            //    let name= "sabarish";
+            //    let ages =26;
+            //    let interest=["creating,teaching new things."];
+            //    let address = {
+            //     city: "chennai",
+            //     state: "Tamil Nadu",
+            //    }   
+               
+            //    function Greeting(){
+            //     let msg= "My name is " + name + ", i love " + interest;
+            //     let msg = `My name is ${name} , i love ${interest}`;
+            //     console.log(msg);
+            //    }
+
+            //    Greeting()
+
+            //    let person={
+
+            //     function createPerson(name){
+            //     return {
+            //    name: name,
+
+            //    Greeting(){
+            //     let msg = `My name is ${this.name}`;
+            //     console.log(msg);
+            //    }
+            //    age :26,
+            //    interest:["creating,teaching new things."],
+            //    IsAlive : true,
+            //     address: {
+            //     city: "chennai",
+            //     state: "Tamil Nadu",
+            //    },
+               
+               
+            // }
+        // }
+
+        // function Greeting(){
+
+        // }
+    //  let sabarish=createPerson("sabarish");
+    //  let akash=createPerson("Akash");
+    //  akash.Greeting();
+                                        //  Javascript factory functions
+
+    //   camelcase: myFirstName(In the sentence except first word remaining all words starting word begins with capital letter)
+    //   Pascalcase: MyFirstN9ame(In the sentence all the words starting a word with capital letter)
+
+     function createPerson(name){   
+        return{
+            name:name,
+
+            Greeting(){
+                
+                console.log(`My name is ${name}`);
+            }
+
+        }
+     }
+let sabarish=createPerson("sabarish");  
+sabarish.Greeting()
+
+                                       //  Javascript dynamic nature of objects
+
+                                    //    It is used to create,delete and edit the object'
+                                       
+
+                                    //   cloning an javascript object
+          const person={
+            name:"sabarish"
+          }   
+
+          person.age=26;
+          person.Greeting=function(){}
+          delete person.Greeting
+          delete person.age
+          
+          console.log(person);
+
+
+          let cricket={
+            name:"virat kohli",
+            age:35,
+            strikerate:48,
+            getFullName(){
+
+                let meta=`My name is ${name},my age is ${age} and my strikerate is ${strikerate}`
+                console.log(meta);
+
+            }
+          }
+          cricket.bowling= "Average"
+          cricket.runs=45000
+
+          let proper={...cricket};
+          console.log(proper);
+          delete cricket.runs;
+          delete cricket.getFullName
+          console.log(cricket);
+
+          let res=[45,74,12,89]
+          let result=Math.min(...res)
+          console.log(`Minimum mark: ${result}` );
+
+                                            // Adding element to an javascript array (push,unshift,splice methods)
+
+          const items=["Apple","Lemon","Grapes"]
+
+          items[3]="Gauva"
+
+          items.push("Mango")
+          items.unshift("Banana")
+          items.splice(2,0 ,"Watermelons","pomagranate")
+          console.log(items);
+
+                                            // Removing an element in an javascript array
+
+           const item3=[1,2,3,4] 
+           
+        // item3.pop()
+        // item3.shift()
+        item3.splice(2,2)
+
+        console.log(item3);
+
+
+
+           
+
+                                            // Finding an element in a javascript array(primitive values)
+
+          const items1=["Apple","Mango","Grapes"]
+          
+          console.log(items1.indexOf("mango"));
+
+          
+          const items2=["Apple","Mango","Grapes","Apple"]
+
+          console.log(items2.lastIndexOf("Apple"));
+
+          console.log(items2.includes("Mango"));
+
+
+                                            // Finding an element in a javascript Reference Array
+
+           const orders=[
+            {id:1, item:"Smartphones", quantity:1},
+            {id:2, item:"A.C", quantity:2},
+             {id:3,item:"Maagi", quantity:3}
+            
+           ]
+let results=orders.find(function(order){
+ return order.item==="Maagi"
+}) 
+
+console.log(results);
+
+
+                                            //  Arrow functions
+
+
+            const orders1=[
+            {id:1, item:"Smartphones", quantity:1},
+            {id:2, item:"A.C", quantity:2},
+             {id:3,item:"Maagi", quantity:3}
+            
+           ] 
+           
+           let results1=orders.find((order1)=>
+
+           order1.item==="Maagi"
+
+           )
+
+           console.log(results1);
+
+                                              // Emptying an javascript array
+
+           let numbers=[1,2,3,4]
+           
+           numbers=[];
+          // numbers.length=0;
+           console.log(numbers);
+
+                                              // Combining and extracting elements in javascript arrays
+
+            const shopping_cart=["Maagi","Beans","Masala"];
+            const additional_cart=["Matchbox","Salt"];
+            // combine
+            let recipe=shopping_cart.concat(additional_cart)
+            // extract
+            let extractedInfo=recipe.slice(1,3)
+            console.log(extractedInfo);
+
+            console.log(recipe);
+
+            const shopping_cart1=[{item:"Rummy"}];
+            const additional_cart1=["Watch","Fridge","roles"];
+
+            let recipe1=shopping_cart1.concat(additional_cart1)
+            shopping_cart1[0].item="Sugar"
+            console.log(recipe1);
+
+                                              //  Javascript spread operator
+
+            const shopping_cart2=["Maagi","Beans","Masala"] ;
+            const additional_cart2=["Matchbox","Salt"];
+            
+            let result2=[...shopping_cart2,...additional_cart2]
+
+            console.log(result2);
+
+                                             //  Javascript arrays:Iterating Elements using for each
+
+            const data_1=["Summary","Paragraph","Jack","King"];
+            data_1.forEach(data_2=>
+              console.log(data_2)
+            )     
+            
+            const data_5=[24,55,85,12]
+
+        let recipe3= data_5.filter(data_6=> data_6>24)
+
+        console.log(recipe3);
+
+                                            // Joining and splitting javascript arrays
+
+        const dailyroutine=["Wakeup","Eat","Sleep"];
+        let dailyroutines=dailyroutine.join("'s, ");
+        console.log(dailyroutines);
+
+        let fullname="Sabarish Akash"
+        
+        let Username=fullname.split(" ")
+let Username1=Username.join("_");
+
+
+        console.log(Username1);
+
+       
+
+        let firstName=Username[0]
+        let lastName=Username[1]
+
+
+        console.log(`My Firstname is ${firstName} and Lastname is ${lastName}`);
+
+                                            // Sorting a javascript array 
+
+            // Sorting a  primitive type values                              
+        const students=[8,7,33]
+
+        // students.sort() To make a ascending order
+
+        // students.sort((a,b)=>{
+                 
+        //  return b-a
+        // })
+
+        // console.log(students);
+
+        // Reverse a javascript array
+
+        students.reverse();
+
+        console.log(students);
+
+
+        
+
+        // Sorting a reference type values
+
+        const students1=[
+          {id:3,name:"Senthil"},
+          {id:8,name:"Guna"},
+          {id:1,name:"anbu"}
+        ]
+
+        students1.sort((a,b)=>{
+
+                nameA=a.name.toLowerCase();
+                nameB=b.name.toLowerCase();
+                
+          if(nameA<nameB)
+
+          return -1;
+          else if(nameA>nameB)
+
+          return 1;
+
+          else
+          return 0;
+        })
+
+        console.log(students1);
+
+                                          // Every method,some method
+
+        const queue_by_age=[15,14,45]; 
+
+      let IsAllowed=  queue_by_age.every((value1,index1,array1)=>{
+            return value1>=16
+        
+        })
+
+        console.log(IsAllowed);
+
+        const queue_by_age1=[1,2,3,4,5];
+
+
+        // Every()
+
+              // let quantity= queue_by_age1.every(value1=>{
+              //  return  value1 % 2 ==0
+              //    })
+
+              //    console.log(quantity);
+
+        // Some()
+        
+
+                let quantity1= queue_by_age1.some(value2=>{
+                    return value2 % 2 == 1
+                  })
+        console.log(quantity1);
+
+
+                                            //  Testing objects in a javascript array using Every,Some
+
+             const items3=[
+              {id:1, name:"Mobiles",isDeliverable:true},
+              {id:2, name:"Accessories",isDeliverable:true},
+              {id:3, name:"T.V",isDeliverable:false},
+             ]                               
+
+            let data_8= items3.every((data_7)=>{
+              return data_7.isDeliverable==true
+             })
+
+              let data_9= items3.some((data_7)=>{
+              return data_7.isDeliverable==true
+             })
+                 console.log(data_8);
+
+                 console.log(data_9);
+
+                                          // Filtering a javascript array
+
+             const queue_by_age2=[16,32,45];
+             
+             let adults=queue_by_age2.filter((value)=>value>=18)
+
+             console.log(adults);
+
+             const cart_items=[
+              {id:1, items:"Android Mobile", cost:6500},
+              {id:2, items:"iPhone Mobile", cost:27000},
+              {id:3, items:"Windows Mobile", cost:8500},
+             ];
+
+          let affordable_phones= cart_items.filter(function(value1){
+              return value1.cost<10000;
+             })
+
+             let affordable_phones1= cart_items.find(function(value1){
+              return value1.cost<10000;
+             })
+
+             let affordable_phones2= cart_items.findIndex(function(value1){
+              return value1.cost>10000;
+             })
+
+             console.log(affordable_phones);
+             console.log(affordable_phones1);
+
+               console.log(affordable_phones2);
+
+                                            // Javascript array: Map()
+
+             const number3=[1,2,3,4,5];
+             console.log(number3);
+             
+             let final=number3.map(function(value3){
+
+              return value3*2;
+             })
+
+             console.log(final);
+
+
+             const people=[
+              {id:1, first_name:"sabarish", last_name:"akash"},
+              {id:2, first_name:"Anbu", last_name:"selvan"},
+              {id:3, first_name:"Suresh", last_name:"sasikala"},
+             ];
+
+            let final1= people.map(function(value){{
+      
+              return [value.first_name , value.last_name].join(" ")
+              
+             }})
+                                          
+
+             console.log(final1);
+
+             
+            let final2= people.map(function(value){{
+      
+             let fullname= `${value.first_name} ${value.last_name}`
+
+             let object={"id": value.id ,"fullname": fullname}
+
+             return object
+              
+             }})
+
+             console.log(final2);
+
+
+             let final3= people.map(function(value){{
+      
+             return `${value.first_name} ${value.last_name}`
+
+           
+              
+             }})
+
+
+                console.log(final3);
+
+                                             
+                                            // Javascript arrays:chaining methods
+
+            let products=[
+              {id:1, title:"Android Phone", cost:7500},
+              {id:2, title:"Gaming Computer", cost:90500},
+              {id:3, title:"Headphone", cost:2400},
+            ];
+            
+            let final4= products.sort((a,b)=>{
+
+          // ascending order
+          return a.cost-b.cost 
+          
+          // descending order
+          return b.cost-a.cost   
+
+            }).sort((a,b)=>{
+              if(a.title<b.title)
+
+              return -1;
+
+             else if(a.title>b.title)
+              return 1;
+
+              else
+
+              return 0;  
+            }).filter(value=>
+              value.cost<=8000)
+           .map(value=>value.title + "- " + value.cost);
+
+ 
+
+console.log(final4);
+
+                                            //  Javascript Arrays:Reduce() Method
+
+          const donations=[24,54,58,6341];
+          
+        let totalDonations= donations.reduce(function(val1,val2){
+            return val1 + val2;
+          })
+
+          console.log(totalDonations);
+
+          const shopping_cart3=[
+            {id:1, item:"Organic Milk", cost:45},
+            {id:2, item:"Bread", cost:35},
+            {id:3, item:"Maagi", cost:40},
+          ];
+          
+          const addCost=((val2,val3)=> val2 + val3.cost);
+
+
+
+       let totalCost= shopping_cart3.reduce(addCost ,0);
+
+       console.log(totalCost);
+
+
+                                          // Normal function method 
+    // let totalCost=shopping_cart3.reduce(function(val1,val2){
+    //   return val1 + val2.cost;
+    // },10);
+
+                                          // Arrow function method
+            
+            // let totalCost=shopping_cart3.reduce((val1,val2)=>val1 + val2.cost ,10);
+
+                                          // Function calling method
+
+                //    function addCost(val1,val2){
+
+                //     return val1 + val2.cost;
+
+                //    }                      
+                // let totalCost=shopping_cart3.reduce(addCost ,0);
+
+                                        
+
+                            
+
+
+                                          //  Difference b/w Sort(), Find(), Filter(), Map(), Reduce() methods
+
+              // Sort()                            
+              const number=[34,54,65,12,78];
+              
+            //  let result1= number.sort();
+            
+
+              // Find()
+
+        // let result1= number.find((value)=>value>50);
+              
+              
+        //  console.log(result1);
+
+        //  Filter()
+
+        // let result1= number.filter((value)=>value>50);
+              
+              
+        //       console.log(result1);
+
+        //  Map()     
+
+        // let result1= number.map((value)=> "#" +value);
+              
+              
+        //       console.log(result1);
+
+        let result3= number.map((value1,value2)=>value1 *value2);
+              
+              
+              console.log(result3);
+
+      //  Reduce()
+
+      let result1= number.reduce((value1,value2)=>value1 *value2);
+              
+              
+              console.log(result1);
+
+              let no1=45;
+              let no2=60;
+
+              // Function Declaration
+
+        // function addCost1(){
+
+               
+        //       console.log(no1 +no2);
+                          
+        //     }
+
+        //     addCost1()
+
+            // Function expression
+
+    // const addCost1= function addCost1(){
+
+               
+    //           console.log(no1 +no2);
+            
+    //        }
+
+    //       addCost1()
+
+          // Anonymous function()
+
+      //     const addCost1=()=>{
+
+               
+      //       console.log(no1 +no2);
+
+      //  }
+
+      //   addCost1()
+
+        
+        // Function expression using constructor
+
+        
+          const addCost1= new Function("console.log(no1 + no2)");
+
+          // addCost1()
+
+
+                                          //  Immediately invoked Function expression (IIFE)
+
+       
+
+       (function sumNumbers(){
+
+        let no3=45;
+        let no4=55;
+        let result=no3 + no4;
+        console.log(result);
+       })();
+      //  sumNumbers();
+
+      // Another method
+
+      (()=>{
+        let no3=45;
+        let no4=55;
+        let result=no3 + no4;
+
+        (function displayNumber(){
+          console.log(result);
+
+        })();
+        // displayNumber();
+       
+         
+       })();
+
+      //  Parameter passing
+
+     let no3=45;
+     let no4=55;
+
+     ((val1,val2)=>{
+
+         let result=val1 + val2;
+
+         console.log(result);
+
+       
+         
+     })(no3,no4);
+
+                                            // Javascript Function Arguments
+
+
+        // 1st method
+
+        //  function addnumbers(tiffen,lunch,petrol){
+        //   let tiffen1=65;
+        //  let lunch1=250;
+        //  let petrol1=99;
+        //   console.log(tiffen + lunch + petrol);
+        //  }
+        //   addnumbers(65,250,99);
+
+          // 2nd method
+
+        //   function addnumbers(tiffen,lunch,petrol){
+         
+        //   console.log(tiffen + lunch + petrol);
+        //  }
+        //   addnumbers(65,250,99);
+
+          // 3rd method 
+
+//           let tiffen1=65;
+//          let lunch1=250;
+//          let petrol1=99;
+
+//           function addnumbers(tiffen,lunch,petrol){
+         
+//             return  tiffen + lunch + petrol;
+           
+//         }
+//         let result4= addnumbers(tiffen1,lunch1,petrol1);
+
+
+// console.log(`Your Total Expense is: ${result4}`);
+
+        
+
+        //  4th method
+
+                                        //  Rest operator method to adding infinite values
+
+        //   function addNumbers(...Expenses){
+
+        //     return  Expenses.reduce((a,b)=>  a + b);
+   
+        //   }
+        // let action= addNumbers(65,250,99,56,98,78,26,65,55,50);
+
+
+        // console.log(`Your total Expense is:${action}`);
+
+
+       
+
+        function addNumbers(loan,...Expenses){
+
+          let total= Expenses.reduce((a,b)=>a + b);
+
+          return total - loan;
+           
+         
+
+
+         
+        }
+       let action= addNumbers(65,250,99,56,87,96,65,74,56,68);
+
+       console.log(`Your Total expense is:${action}`);
+
+                                          //  Default parameter
+
+                                          // If we give the parameter value it will take the value and calculate 
+                                         // otherwise it will take assigned value.
+
+         
+       function addCost2(val1,val2=18){
+
+      let reach= val1 + val2;
+
+      return reach
+    
+       }   
+       
+     let react= addCost2(56,88)
+
+ 
+     console.log(`Your Total Expense is:${react}`);
+
+
+    
+
+    function addNumbers1(no6,...no7){
+
+
+      return   no7.reduce((a,b)=>a + b)
+
+       
+    }
+
+   let reach= addNumbers1(65,78,78,65,85,25,65,75,95,98,89);
+
+
+   console.log(reach);
+
+                                      //  How to access object using THIS keyword
+
+
+   let person1={
+    name:"Suresh",
+    age:26,
+    interest:["Creating, teaching new things"],
+    isAlive:true,
+    address:{
+      city:"Komarapalayam",
+      state:"Tamil Nadu",
+    },
+
+    greeting:function(){
+       return `My name is ${this.name}, i love ${this.interest}`
+     
+    }
+    
+   }
+  console.log(person1.greeting()); 
+
+
+   let person3={
+    name:"Akash",
+    age:26,
+    interest:["Creating, teaching new things"],
+    isAlive:true,
+    address:{
+      city:"Komarapalayam",
+      state:"Tamil Nadu",
+    },
+
+    greeting:function(){
+       return `My name is ${person3.name}  ${person3.interest}`;
+     
+    }
+    
+   }
+
+ console.log(person3.greeting()); 
+
+//  Another method
+
+let person2={
+    name:"Sabarish",
+    age:26,
+    interest:["Creating, teaching new things"],
+    isAlive:true,
+    address:{
+      city:"Komarapalayam",
+      state:"Tamil Nadu",
+    },
+
+    greeting:function(){
+       
+      let reach= person2.name + " " + person2.interest;
+
+      console.log(reach);
+     
+    }
+    
+   }
+
+person2.greeting(); 
+
+
+let student={
+
+
+ firstName1:"Sakthi",
+ lastName1:"Manikandan",
+
+//  Get method
+
+get fullname(){
+  return student.firstName1 + " " + student.lastName1;
+ },
+
+ // Set method
+
+set state(value){
+
+let values=  value.split(" ");
+
+
+this.firstName1 = values[0];
+this.lastName1 = values[1]??"";
+
+ }
+
+}
+
+// example for 2 word name (no need this ??"")
+
+// student.state="Trisha Krishnan"; 
+
+// example for 1 word name 
+
+student.state="Trisha";
+
+console.log(student.fullname);
+
+
+let student1={
+
+ firstName:"sabarish",
+ lastName:"Akash",
+
+ get fullname(){
+ return student1.firstName + " " + student1.lastName;
+ },
+
+ set fullname(value){
+
+  if(typeof value != "String"){
+    const err= new error("It is not a string");
+    throw err;
+  }
+
+  if(value.length<=3){
+    throw "Name Invalid";
+  }
+  else{
+   let values= value.split(" ");
+
+ this.firstName=values[0];
+    this.lastName=values[1] ?? "";
+  }
+
+   },
+};
+try{
+student1.fullname="Welcome";
+}
+catch(ex){
+  console.log(ex);
+}
+
+// student1.fullname="Welcome";
+
+console.log(student1.fullname);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+   
+
+
+
+   
+
+
+  
+
+   
+
+  
+ 
+
+   
+
+       
+
+
+
+
+         
+        
+       
+
+
+
+
+ 
+
+
+
+           
+
+                                              
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+         
+
+          
+
+        
+
+        
+           
+
+           
+
+       
+                                              
+        
+
+        
+
+         
+            
+
+    </script>
+</body>
+</html>
